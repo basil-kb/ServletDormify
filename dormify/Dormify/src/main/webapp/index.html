@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::Dormify::</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #1B4D3E, #4CA673);
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .left-section {
+            flex: 1;
+            text-align: left;
+            padding: 20px;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .description {
+            font-size: 1.1rem;
+            margin-top: 15px;
+            max-width: 500px;
+            line-height: 1.6;
+        }
+        .right-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .top-buttons {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            display: flex;
+            gap: 15px;
+        }
+        .top-buttons a {
+            padding: 12px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        .admin-btn { background: #E74C3C; color: white; }
+        .backoffice-btn { background: #3498DB; color: white; }
+        .contact-btn { background: #2ECC71; color: white; }
+        .top-buttons a:hover { opacity: 0.8; }
+    </style>
+</head>
+<body>
+
+    <!-- Top Right Buttons -->
+    <div class="top-buttons">
+              <a href="contact_me.html" class="contact-btn">Contact Me </a>
+    </div>
+
+    <div class="container">
+        <!-- Left Side - Dormify Information -->
+        <div class="left-section">
+            
+            <h1 style="font-family: Palatino Linotype, Book Antiqua, Palatino, serif" class="title" align="center">DORMIFY </h1>
+            <p class="description" align="justify">
+                Dormify Hostel is a modern and stylish accommodation designed for travelers,students,and digital nomads.
+                With a vibrant and welcoming atmosphere,Dormify blends comfort and community,offering cozy stays with 
+                excellent amenities.<br><br>
+				
+				✨ Why Choose Dormify?<br>
+							✔️ VibrantAtmosphere
+							✔️ Cozy & Well-Designed Rooms  <br>
+							✔️ Wi-Fi & Co-Working Spaces 
+							✔️ Fully Equipped Kitchen <br>
+							✔️ 24/7 Security & Smart Access 
+							✔️ Fun Social Events<br>
+							✔️ Prime Location
+							✔️ Affordable Pricing & Flexible Stays <br>
+            </p>
+        </div>
+
+        <!-- Right Side - AI Design -->
+        <div class="right-section">
+	
+
+
+
+
+					<div class="bg-white bg-opacity-20 backdrop-blur-lg p-8 rounded-2xl shadow-lg max-w-sm w-full">
+						<div class="flex justify-center">
+							<img src="img/a.jpg" 
+								 alt="dormify Logo" class="w-12 h-22 mb-50 rounded-full">
+						</div>
+						<h2 class="text-3xl font-bold text-center text-white">Dormify Portal</h2>
+						<p class="text-center text-gray-200 mb-6">Select Login Type</p>
+
+						<!-- Buttons for selecting login type -->
+						<div class="space-y-4">
+							<a href="login.html"
+								class="block w-full bg-red-500 hover:bg-red-600 text-white text-center font-bold py-3 rounded-lg transition duration-300">
+								Login as Admin
+							</a>
+							<a href="backofficelogin.html"
+								class="block w-full bg-blue-500 hover:bg-blue-600 text-white text-center font-bold py-3 rounded-lg transition duration-300">
+								Login as Back Office
+							</a>
+						</div>
+
+						<p class="text-center text-gray-200 text-sm mt-4">
+							Restricted Access Only
+						</p>
+					</div>
+
+        </div>
+    </div>
+
+</body>
+</html>

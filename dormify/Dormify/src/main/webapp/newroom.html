@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Room</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        small {
+            font-size: 12px;
+            color: #555;
+            display: block;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+
+    <script>
+        function valForm() {
+            let roomNo = document.addRoom.RoomNo.value;
+            let roomSize = document.addRoom.RoomSize.value;
+
+            if (roomNo === "") {
+                alert("Enter Room Number");
+                document.addRoom.RoomNo.focus();
+                return false;
+            }
+
+            if (!/^[0-9]+[SML]$/.test(roomNo)) {
+                alert("Invalid Room Number format! Example: 102M (S-Small, M-Medium, L-Large)");
+                document.addRoom.RoomNo.focus();
+                return false;
+            }
+
+            if (roomSize === "Select_Any") {
+                alert("Select a valid Room Size");
+                document.addRoom.RoomSize.focus();
+                return false;
+            }
+            alert("Processing.......");
+            return true;
+           
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Add New Room</h1>
+        
+        <form name="addRoom" method="post" action="newroomcheck" onsubmit="return valForm();">
+            <label for="RoomNo">Room Number</label>
+            <input type="text" name="RoomNo" id="RoomNo" placeholder="Enter Room Number" pattern="^[0-9]+[SML]$"/>
+            <small>Format: 102M (S-Small, M-Medium, L-Large)</small>
+
+            <label for="RoomSize">Select Size</label>
+            <select name="RoomSize" id="RoomSize">
+                <option value="Select_Any">--Select Any--</option>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+
+            <input type="submit" class="btn" value="Add Room"/>
+        </form>
+    </div>
+
+</body>
+</html>

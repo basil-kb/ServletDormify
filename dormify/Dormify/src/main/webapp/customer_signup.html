@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Signup</title>
+    <style>
+        body {
+            background: linear-gradient(to right top, #0b2e64, #00446d, #00545c, #026041, #54662e);
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .container {
+            width: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .nav {
+            display: block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .nav:hover {
+            background: #00545c;
+        }
+        label {
+            font-size: 1.1rem;
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            outline: none;
+            text-align: center;
+        }
+        input::placeholder, textarea::placeholder {
+            color: #ddd;
+        }
+        small {
+            display: block;
+            font-size: 0.9rem;
+            color: #ddd;
+            margin-top: 5px;
+        }
+        .gender-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        .gender-container input {
+            width: auto;
+            margin-right: 5px;
+        }
+        input[type="submit"] {
+            background: #026041;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 20px;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background: #00545c;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="admin" class="nav">Home</a>
+    <h1>Sign Up</h1>
+    
+    <form name="sign_up" id="sign_up" method="post" action="customersignup"> 
+        <label>Name</label>
+        <input type="text" name="cusName" id="UserName" placeholder="Enter your Name" required/>
+
+        <label>Phone Number</label>
+        <input type="tel" name="cusPhone" placeholder="91-1111-233-233" pattern="^[91]{2}-[0-9]{4}-[0-9]{3}-[0-9]{3}" required/>
+        <small>Format: 91-1111-233-233</small>
+
+        <label>Gender</label>
+        <div class="gender-container">
+            <label><input type="radio" name="cusGender" value="Male" required/> Male</label>
+            <label><input type="radio" name="cusGender" value="Female"/> Female</label>
+        </div>
+
+        <label>Address</label>
+        <textarea name="cusAddress" rows="4" placeholder="Enter your address" required></textarea>
+
+        <input type="submit" value="SIGN UP"/>
+    </form>
+</div>
+
+</body>
+</html>

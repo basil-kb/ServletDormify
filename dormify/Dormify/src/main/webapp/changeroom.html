@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Change Your Room</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        small {
+            font-size: 12px;
+            color: #555;
+            display: block;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Change Your Room</h1><br><br>
+
+        <form name="changeRoom" method="post" action="changeRoom"> 
+            <label>Customer ID</label>
+            <input type="text" name="cusID" placeholder="Enter your ID" required />
+
+            <label>Old Room Number</label>
+            <input type="text" name="ORoomNo" placeholder="Enter Old Room Number" pattern="^[0-9]+[SML]$" required />
+            <small>Format: 102M (S-Small, M-Medium, L-Large)</small>
+
+            <br><br>
+
+            <input type="submit" class="btn" value="Change" onClick="return valForm();" />
+        </form>
+    </div>
+
+</body>
+</html>
